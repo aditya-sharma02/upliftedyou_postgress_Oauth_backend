@@ -1,21 +1,11 @@
-// const mongoose = require("mongoose")
-
-
-// mongoose.connect(process.env.MONGODB_URL, {
-// }).then(() => {
-//     console.log("coonection eshtablished")
-// }).catch((e) => {
-//     console.log(e)
-// })
-
-// ****************postgrsql********
 const { Client } = require('pg')
+console.log(process.env.password)
 const client = new Client({
-    host: "localhost",
-    user: "postgres",
-    port: 5432,
-    password: "adisha0206",
-    database: "upliftedyoudb"
+    host: process.env.host,
+    user: process.env.user,
+    port: process.env.port,
+    password: process.env.PASSWORD,
+    database: process.env.database,
 })
 
 module.exports = client
